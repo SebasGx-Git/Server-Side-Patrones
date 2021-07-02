@@ -10,8 +10,8 @@ namespace PERUSTARS.Domain.Persistence.Repositories
         Task<IEnumerable<Artist>> ListAsync();
         Task AddAsync(Artist artist);
         Task<Artist> FindById(long id);
-        void Update(Artist artist);
         void Remove(Artist artist);
+        void Update(Artist artist);
 
         Task<bool> isSameBrandingName(string brandingname);
 

@@ -238,19 +238,22 @@ namespace PERUSTARS.Domain.Persistence.Contexts
             builder.Entity<EventAssistance>().ToTable("EventAssistances");
             builder.Entity<EventAssistance>().HasKey(pt => new { pt.HobbyistId, pt.EventId });
             builder.Entity<EventAssistance>().Property(pt => pt.AttendanceDay);
-        
+
 
             //Relaciones
+
+            builder.Entity<EventAssistance>()
+             .HasOne(pt => pt.Event)
+             .WithMany(p => p.Assistance)
+             .HasForeignKey(pt => pt.EventId);
+
+
             builder.Entity<EventAssistance>()
                 .HasOne(pt => pt.Hobbyist)
                 .WithMany(p => p.Assistance)
                 .HasForeignKey(pt => pt.HobbyistId);
 
-            builder.Entity<EventAssistance>()
-                .HasOne(pt => pt.Event)
-                .WithMany(p => p.Assistance)
-                .HasForeignKey(pt => pt.EventId);
-
+         
 
             //*************************************************//
             //*Seed Data*//
@@ -264,27 +267,6 @@ namespace PERUSTARS.Domain.Persistence.Contexts
                    new Specialty { Id = 3, Name = "Specialty3" },
                    new Specialty { Id = 4, Name = "Specialty4" }
                );
-
-            //  builder.Entity<Hobbyist>().HasData
-            //  (
-            //      new Hobbyist { Id = 3, Firstname = "Sebastian", Lastname = "Sasaku" },
-            //      new Hobbyist { Id = 4, Firstname = "Kelly", Lastname = "Vargas" }
-            //   );
-
-            //builder.Entity<Artist>().HasData
-            //    (
-            //     new Artist { Id = 1, BrandName = "SebasGx", Description = "Artista Nuevo en PeruStars", Phrase = "Solo se que nada se", Firstname = "Sebastian", Lastname = "Gonzales", SpecialtyId = 1},
-            //     new Artist { Id = 2, BrandName = "Dr.Chocolate", Description = "Escultor Nuevo en PeruStars", Phrase = "Ojos que no ven corazon que no siente", Firstname = "Diego Alonso", Lastname = "Chocolate", SpecialtyId = 4 }
-
-            //    );
-
-            //builder.Entity<Artwork>().HasData
-            //    (
-            //    new Artwork {ArtworkId = 1, ArtTitle = "La noche estrellada 2", ArtDescription = "Nueva Representacion de la noche estrellada",ArtCost = 90, LinkInfo = "http//noche.estrellada",ArtistId = 2 },
-            //    new Artwork { ArtworkId = 2, ArtTitle = "El Beso 2", ArtDescription = "Nueva Representacion de la obra de klimt", ArtCost = 70, LinkInfo = "http//elbeso ", ArtistId = 2 }
-            //    );
-
-
 
             // Apply Naming Convention
             builder.ApplySnakeCaseNamingConvention();

@@ -140,7 +140,6 @@ namespace PERUSTARS.Test
 
 
 
-        //Artista NO repite brand name
         private Mock<IArtistRepository> GetDefaultIArtistRepositoryInstance()
         {
             return new Mock<IArtistRepository>(); 

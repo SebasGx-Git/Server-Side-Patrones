@@ -32,27 +32,6 @@ namespace PERUSTARS.Controllers
 
 
 
-        /*****************************************************************/
-                    /*LIST OF ALL EVENTS BY HOBBYIST ID*/
-        /*****************************************************************/
-
-        [SwaggerOperation(
-           Summary = "Get All Events By Hobbyist Id",
-           Description = "Get All Events By Hobbyist Id",
-           OperationId = "GetAllEventsByHobbyistId")]
-        [SwaggerResponse(200, "Get All Events By Hobbyist Id", typeof(IEnumerable<EventResource>))]
-
-        [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<EventResource>), 200)]
-        [ProducesResponseType(typeof(BadRequestResult), 404)]
-        public async Task<IEnumerable<EventResource>> GetAllByHobbyistIdAsync(long hobbyistId)
-        {
-            var events = await _eventService.ListByHobbyistAsync(hobbyistId);
-            var resources = _mapper.Map<IEnumerable<Event>, IEnumerable<EventResource>>(events);
-            return resources;
-        }
-
-
 
         /*****************************************************************/
                             /*ASSIGN EVENT ASSISTANCE*/
@@ -75,10 +54,28 @@ namespace PERUSTARS.Controllers
             return Ok(eventResource);
         }
 
+        /*****************************************************************/
+        /*LIST OF ALL EVENTS BY HOBBYIST ID*/
+        /*****************************************************************/
 
+        [SwaggerOperation(
+           Summary = "Get All Events By Hobbyist Id",
+           Description = "Get All Events By Hobbyist Id",
+           OperationId = "GetAllEventsByHobbyistId")]
+        [SwaggerResponse(200, "Get All Events By Hobbyist Id", typeof(IEnumerable<EventResource>))]
+
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<EventResource>), 200)]
+        [ProducesResponseType(typeof(BadRequestResult), 404)]
+        public async Task<IEnumerable<EventResource>> GetAllByHobbyistIdAsync(long hobbyistId)
+        {
+            var events = await _eventService.ListByHobbyistAsync(hobbyistId);
+            var resources = _mapper.Map<IEnumerable<Event>, IEnumerable<EventResource>>(events);
+            return resources;
+        }
 
         /*****************************************************************/
-                            /*UNASSIGN EVENT ASSISTANCE*/
+        /*UNASSIGN EVENT ASSISTANCE*/
         /*****************************************************************/
 
         [SwaggerOperation(

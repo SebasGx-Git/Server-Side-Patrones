@@ -19,8 +19,9 @@ namespace PERUSTARS.Controllers
     [Produces("application/json")]
     public class ArtworksController : ControllerBase
     {
-        private readonly IArtworkService _artworkService;
         private readonly IMapper _mapper;
+        private readonly IArtworkService _artworkService;
+       
 
         public ArtworksController(IArtworkService artowrkService, IMapper mapper)
         {

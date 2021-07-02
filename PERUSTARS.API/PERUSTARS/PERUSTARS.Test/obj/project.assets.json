@@ -6864,20 +6864,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gabri\\.nuget\\packages\\": {}
+    "C:\\Users\\JOYCE\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\downloads\\patrones\\PERUSTARS.API\\PERUSTARS\\PERUSTARS.Test\\PERUSTARS.Test.csproj",
+      "projectUniqueName": "D:\\Desktop\\Patrones 2.0\\Server-Side-Patrones\\PERUSTARS.API\\PERUSTARS\\PERUSTARS.Test\\PERUSTARS.Test.csproj",
       "projectName": "PERUSTARS.Test",
-      "projectPath": "D:\\downloads\\patrones\\PERUSTARS.API\\PERUSTARS\\PERUSTARS.Test\\PERUSTARS.Test.csproj",
-      "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "D:\\downloads\\patrones\\PERUSTARS.API\\PERUSTARS\\PERUSTARS.Test\\obj\\",
+      "projectPath": "D:\\Desktop\\Patrones 2.0\\Server-Side-Patrones\\PERUSTARS.API\\PERUSTARS\\PERUSTARS.Test\\PERUSTARS.Test.csproj",
+      "packagesPath": "C:\\Users\\JOYCE\\.nuget\\packages\\",
+      "outputPath": "D:\\Desktop\\Patrones 2.0\\Server-Side-Patrones\\PERUSTARS.API\\PERUSTARS\\PERUSTARS.Test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\JOYCE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -6890,8 +6897,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\downloads\\patrones\\PERUSTARS.API\\PERUSTARS\\PERUSTARS\\PERUSTARS.csproj": {
-              "projectPath": "D:\\downloads\\patrones\\PERUSTARS.API\\PERUSTARS\\PERUSTARS\\PERUSTARS.csproj"
+            "D:\\Desktop\\Patrones 2.0\\Server-Side-Patrones\\PERUSTARS.API\\PERUSTARS\\PERUSTARS\\PERUSTARS.csproj": {
+              "projectPath": "D:\\Desktop\\Patrones 2.0\\Server-Side-Patrones\\PERUSTARS.API\\PERUSTARS\\PERUSTARS\\PERUSTARS.csproj"
             }
           }
         }

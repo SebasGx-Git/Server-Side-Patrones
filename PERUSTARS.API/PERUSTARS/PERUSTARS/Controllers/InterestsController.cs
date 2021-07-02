@@ -16,8 +16,8 @@ namespace PERUSTARS.Controllers
     [Produces("application/json")]
     public class InterestsController : ControllerBase
     {
-        private readonly ISpecialtyService _specialtyService;
         private readonly IInterestService _interestService;
+        private readonly ISpecialtyService _specialtyService;
         private readonly IMapper _mapper;
 
         public InterestsController(ISpecialtyService specialtyService, IInterestService interestService, IMapper mapper)

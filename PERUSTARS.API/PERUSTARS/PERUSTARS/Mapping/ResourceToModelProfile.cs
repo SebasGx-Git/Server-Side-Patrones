@@ -11,12 +11,13 @@ namespace PERUSTARS.Mapping
     public class ResourceToModelProfile : Profile
     {
         public ResourceToModelProfile() {
-            CreateMap<SaveArtistResource, Artist>();
+
+            CreateMap<SaveEventAssistanceResource, EventAssistance>();
             CreateMap<SavePersonResource, Person>();
             CreateMap<SaveArtworkResource, Artwork>();
             CreateMap<SaveEventResource, Event>();
+            CreateMap<SaveArtistResource, Artist>();
             CreateMap<SaveClaimTicketResource, ClaimTicket>();
-            CreateMap<SaveEventAssistanceResource, EventAssistance>();
             CreateMap<SaveHobbyistResource, Hobbyist>();
         }
     }
